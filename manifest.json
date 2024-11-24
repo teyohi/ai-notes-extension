@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "AI Notes Classifier",
+  "version": "1.0",
+  "description": "Use AI to classify text and save it to Google Docs.",
+  "icons": {
+    "16": "NoteAI_16.png",
+    "48": "NoteAI_48.png",
+    "128": "NoteAI_128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "identity",
+    "identity.email",
+    "contextMenus",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://docs.googleapis.com/*",
+    "https://www.googleapis.com/*",
+    "https://api.openai.com/*"
+  ],
+  "oauth2": {
+    "client_id": "",
+    "scopes": [
+      "https://www.googleapis.com/auth/documents",
+      "https://www.googleapis.com/auth/drive.file"
+    ]
+  },
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
